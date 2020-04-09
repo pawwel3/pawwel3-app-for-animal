@@ -37,13 +37,14 @@ class App extends Component {
       },
     ],
   };
-  handelAll = () => {};
+  handelAll = () => {
+    console.log("działa");
+  };
   render() {
-    const items = [...this.state.tasks];
     return (
       <>
         <button onClick={this.handelAll}>Wszystkie</button>
-        {this.items.map((task) => (
+        {this.state.tasks.map((task) => (
           <AnimalList animals={task} key={task.id} />
         ))}
       </>
